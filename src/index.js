@@ -24,4 +24,5 @@ inputCity.addEventListener("keyup", (e) => {
     inputCity.value = "";
   }
   msg.classList.remove("error");
+  inputCity.value = e.code;
 });
