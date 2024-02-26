@@ -84,7 +84,7 @@ body {
   grid-template-columns: 4fr 1fr;
   gap: 2px;
 }
-.container .col #input #done {
+.container .col #input #ok {
   border: none;
   outline: none;
   background-color: var(--main-color);

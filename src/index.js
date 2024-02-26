@@ -7,7 +7,7 @@ import buildDom from "./dom";
 const DEFAULT_CITY = "Idlib";
 let defaultWeather = getWeather(DEFAULT_CITY);
 const msg = document.querySelector(".col #input + .msg");
-const done = document.getElementById("done");
+const ok = document.getElementById("ok");
 
 const inputCity = document.getElementById("city");
 
@@ -34,4 +34,4 @@ inputCity.addEventListener("change", () => {
   msg.classList.remove("error");
 });
 
-done.addEventListener("click", drawWeather);
+ok.addEventListener("click", drawWeather);
