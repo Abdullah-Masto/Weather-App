@@ -1,0 +1,81 @@
+:root {
+  --background-color: #060109;
+  --main-color: rgba(75, 75, 75, 0.2);
+}
+* {
+  box-sizing: border-box;
+  border-radius: 5px;
+  color: #ccc;
+}
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background-color: var(--background-color);
+}
+#city {
+  background-color: var(--main-color);
+  height: 6vh;
+  padding: 3px;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+.container {
+  background-color: var(--main-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 8px;
+}
+.container.outer {
+  background-color: var(--main-color);
+  margin: 10px auto;
+  width: 320px;
+  padding: 3px;
+  border: white 1px solid;
+}
+.container .card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.container .big {
+  display: flex;
+  flex-direction: column;
+}
+.container .big h1 {
+  margin: 0.2em 0;
+  display: flex;
+}
+.container .big h1::after {
+  content: "°";
+  font-size: 22px;
+  display: block;
+  margin-bottom: auto;
+}
+.container #temp .info {
+  display: flex;
+}
+.container #temp .info::after {
+  content: "°";
+  font-size: 16px;
+  display: block;
+  margin-bottom: auto;
+}
+.container .col {
+  display: flex;
+  flex-direction: column;
+  padding: 4px;
+  gap: 2px;
+}
+.container .col .msg {
+  background-color: #500000;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  padding: 3px;
+  display: none;
+}
+.container .col .msg.error {
+  display: block;
+}
