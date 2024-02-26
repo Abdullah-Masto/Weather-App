@@ -79,3 +79,14 @@ body {
 .container .col .msg.error {
   display: block;
 }
+.container .col #input {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  gap: 2px;
+}
+.container .col #input #done {
+  border: none;
+  outline: none;
+  background-color: var(--main-color);
+  cursor: pointer;
+}

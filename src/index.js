@@ -6,11 +6,19 @@ import buildDom from "./dom";
 
 const DEFAULT_CITY = "Idlib";
 let defaultWeather = getWeather(DEFAULT_CITY);
-const msg = document.querySelector(".col #city + .msg");
+const msg = document.querySelector(".col #input + .msg");
+const done = document.getElementById("done");
 
 const inputCity = document.getElementById("city");
 
 buildDom(defaultWeather);
+
+function drawWeather(e) {
+  let city = inputCity.value;
+  let data = getWeather(city);
+  buildDom(data);
+  inputCity.value = "";
+}
 
 inputCity.addEventListener("keyup", (e) => {
   if (
@@ -18,11 +26,12 @@ inputCity.addEventListener("keyup", (e) => {
     e.code.toLowerCase() === "return" ||
     e.code.toLowerCase() === "next"
   ) {
-    let city = inputCity.value;
-    let data = getWeather(city);
-    buildDom(data);
-    inputCity.value = "";
+    drawWeather(e);
   }
   msg.classList.remove("error");
-  inputCity.value = e.code;
 });
+inputCity.addEventListener("change", () => {
+  msg.classList.remove("error");
+});
+
+done.addEventListener("click", drawWeather);

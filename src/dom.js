@@ -1,4 +1,4 @@
-const msg = document.querySelector(".col #city + .msg");
+const msg = document.querySelector(".col #input + .msg");
 const image = document.getElementById("stateImg");
 const location = document.querySelector("#location .info");
 const state = document.querySelector("#state .info");
