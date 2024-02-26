@@ -13,7 +13,11 @@ const inputCity = document.getElementById("city");
 buildDom(defaultWeather);
 
 inputCity.addEventListener("keyup", (e) => {
-  if (e.code === "Enter") {
+  if (
+    e.code === "Enter" ||
+    e.code.toLowerCase() === "return" ||
+    e.code.toLowerCase() === "next"
+  ) {
     let city = inputCity.value;
     let data = getWeather(city);
     buildDom(data);
