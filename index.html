@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="shortcut icon" href="sun.png" type="image/x-icon" />
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <div class="container outer">
+      <div class="col">
+        <input type="text" name="city" id="city" placeholder="Search city" />
+        <span class="msg">city not found!</span>
+      </div>
+      <div class="subContainer">
+        <img src="" alt="" id="stateImg" />
+        <div class="container">
+          <div class="card" id="location">
+            <span class="label">Location:</span>
+            <span class="info"></span>
+          </div>
+          <div class="card" id="state">
+            <span class="label">State:</span>
+            <span class="info"></span>
+          </div>
+          <div class="big" id="temp">
+            <h1 class="temp"></h1>
+            <div class="card" id="feelslike">
+              <span class="label">feels like:</span>
+              <span class="info"></span>
+            </div>
+          </div>
+          <div class="card" id="humidity">
+            <span class="label">Humidity:</span>
+            <span class="info"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
